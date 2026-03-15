@@ -59,7 +59,6 @@ for ticker in stocks:
     data = yf.download(ticker, period="1d")
     prices[ticker] = float(data["Close"].iloc[-1])
 
-
 def get_market_options(ticker):
     stock = yf.Ticker(ticker)
     expirations = stock.options
